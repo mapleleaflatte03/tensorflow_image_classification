@@ -1,114 +1,226 @@
-# TensorFlow Image Classification Project
+# TensorFlow Image Classification - Coursera Final Assignment# TensorFlow Image Classification Project
 
-**Course:** IBM AI Engineering Professional Certificate - Deep Learning with TensorFlow  
+
+
+Binary image classification using Transfer Learning with MobileNetV2 on Cats vs Dogs dataset.**Course:** IBM AI Engineering Professional Certificate - Deep Learning with TensorFlow  
+
 **Author:** Son Nguyen  
-**Date:** November 2, 2025
 
----
+**Course:** IBM AI Engineering Professional Certificate  **Date:** November 2, 2025
 
-## 📋 Project Overview
+**Author:** Son Nguyen  
 
-This project implements **image classification using TensorFlow and Keras** with transfer learning. The assignment covers:
+**Date:** November 2, 2025---
 
-1. Feature extraction using pre-trained models
-2. Fine-tuning deep learning models
-3. Model evaluation and visualization
-4. Image prediction and classification
 
----
 
-## 📁 Project Structure
+---## 📋 Project Overview
 
-```
-tensorflow-image-classification/
-│
-├── notebooks/
-│   └── Image_Classification_Project.ipynb    # Main notebook with all tasks
-│
-├── screenshots/                                # Auto-generated screenshots
-│   ├── tensorflow_version.png                 # Task 1: TensorFlow version
-│   ├── test_generator.png                     # Task 2: Test generator
-│   ├── train_generator_len.png                # Task 3: Train generator length
-│   ├── model_summary.png                      # Task 4: Model summary
-│   ├── model_compile.png                      # Task 5: Model compile code
-│   ├── plot_accuracy_curve.png                # Task 6: Accuracy curves
-│   ├── plot_loss_curve.png                    # Task 7: Loss curves
+
+
+## Project StructureThis project implements **image classification using TensorFlow and Keras** with transfer learning. The assignment covers:
+
+
+
+```1. Feature extraction using pre-trained models
+
+tensorflow-image-classification/2. Fine-tuning deep learning models
+
+├── notebooks/3. Model evaluation and visualization
+
+│   └── Image_Classification_Project.ipynb    # Main assignment notebook4. Image prediction and classification
+
+├── screenshots/                                # 10 screenshots for submission
+
+│   ├── tensorflow_version.png---
+
+│   ├── test_generator.png
+
+│   ├── train_generator_len.png## 📁 Project Structure
+
+│   ├── model_summary.png
+
+│   ├── model_compile.png```
+
+│   ├── plot_accuracy_curve.pngtensorflow-image-classification/
+
+│   ├── plot_loss_curve.png│
+
+│   ├── plot_finetune_model.png├── notebooks/
+
+│   ├── extract_features_model.png│   └── Image_Classification_Project.ipynb    # Main notebook with all tasks
+
+│   └── finetuned_model.png│
+
+├── data/├── screenshots/                                # Auto-generated screenshots
+
+│   └── prepared/                              # Clean dataset (25,000 images)│   ├── tensorflow_version.png                 # Task 1: TensorFlow version
+
+│       ├── train/      (17,498 images)│   ├── test_generator.png                     # Task 2: Test generator
+
+│       ├── validation/ (3,750 images)│   ├── train_generator_len.png                # Task 3: Train generator length
+
+│       └── test/       (3,750 images)│   ├── model_summary.png                      # Task 4: Model summary
+
+├── requirements.txt│   ├── model_compile.png                      # Task 5: Model compile code
+
+└── README.md│   ├── plot_accuracy_curve.png                # Task 6: Accuracy curves
+
+```│   ├── plot_loss_curve.png                    # Task 7: Loss curves
+
 │   ├── plot_finetune_model.png                # Task 8: Fine-tune accuracy
-│   ├── extract_features_model.png             # Task 9: Extract features prediction
+
+---│   ├── extract_features_model.png             # Task 9: Extract features prediction
+
 │   └── finetuned_model.png                    # Task 10: Fine-tuned prediction
-│
+
+## Dataset│
+
 ├── data/                                       # Dataset (auto-downloaded)
-│   ├── train/
-│   ├── validation/
-│   └── test/
-│
+
+- **Source:** Microsoft Cats vs Dogs│   ├── train/
+
+- **Total:** 25,000 images (12,500 cats + 12,500 dogs)│   ├── validation/
+
+- **Split:** 70% train / 15% validation / 15% test│   └── test/
+
+- **Preprocessing:** Corrupted images removed│
+
 ├── requirements.txt                            # Python dependencies
-└── README.md                                   # This file
+
+---└── README.md                                   # This file
+
 ```
+
+## Model Architecture
 
 ---
 
-## 🛠️ Setup Instructions
+- **Base Model:** MobileNetV2 (pre-trained on ImageNet)
 
-### 1. Install Dependencies
+- **Transfer Learning:** Feature extraction + Fine-tuning## 🛠️ Setup Instructions
 
-```bash
+- **Input Shape:** 224×224×3
+
+- **Output:** Binary classification (Cat vs Dog)### 1. Install Dependencies
+
+
+
+---```bash
+
 pip install -r requirements.txt
-```
 
-### 2. Download Dataset (Automatic)
+## Assignment Tasks (10/10)```
 
-The notebook will automatically download the **Microsoft Cats vs Dogs dataset** (~800 MB) when you run it.
 
-**Dataset Details:**
-- **Source:** Microsoft Research
-- **Size:** ~25,000 images (12,500 cats + 12,500 dogs)
-- **URL:** https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip
 
-**Dataset Split:**
-- Training: 70% (~17,500 images)
-- Validation: 15% (~3,750 images)
-- Test: 15% (~3,750 images)
+| Task | Description | Points | Screenshot |### 2. Download Dataset (Automatic)
 
-### 3. Run Notebook
+|------|-------------|--------|------------|
 
-```bash
+| 1 | Print TensorFlow version | 2 | `tensorflow_version.png` |The notebook will automatically download the **Microsoft Cats vs Dogs dataset** (~800 MB) when you run it.
+
+| 2 | Create test_generator | 2 | `test_generator.png` |
+
+| 3 | Print train_generator length | 2 | `train_generator_len.png` |**Dataset Details:**
+
+| 4 | Print model summary | 2 | `model_summary.png` |- **Source:** Microsoft Research
+
+| 5 | Compile model | 2 | `model_compile.png` |- **Size:** ~25,000 images (12,500 cats + 12,500 dogs)
+
+| 6 | Plot accuracy curves (feature extraction) | 2 | `plot_accuracy_curve.png` |- **URL:** https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip
+
+| 7 | Plot loss curves (fine-tuned) | 2 | `plot_loss_curve.png` |
+
+| 8 | Plot accuracy curves (fine-tuned) | 2 | `plot_finetune_model.png` |**Dataset Split:**
+
+| 9 | Test prediction (feature extraction model) | 2 | `extract_features_model.png` |- Training: 70% (~17,500 images)
+
+| 10 | Test prediction (fine-tuned model) | 4 | `finetuned_model.png` |- Validation: 15% (~3,750 images)
+
+| | **TOTAL** | **22/22** | **10 files** |- Test: 15% (~3,750 images)
+
+
+
+**Passing Score:** 70% (15.4/22 points)### 3. Run Notebook
+
+
+
+---```bash
+
 jupyter notebook notebooks/Image_Classification_Project.ipynb
-```
 
-### 4. Execute All Cells
+## Installation```
 
-Run all cells in order:
+
+
+```bash### 4. Execute All Cells
+
+pip install -r requirements.txt
+
+```Run all cells in order:
+
 1. Dataset will auto-download and extract
-2. Images will be cleaned (remove corrupted files)
+
+---2. Images will be cleaned (remove corrupted files)
+
 3. Dataset will be split into train/val/test
-4. Model will be trained (or use simulated results for quick screenshots)
+
+## Usage4. Model will be trained (or use simulated results for quick screenshots)
+
 5. Screenshots will be saved to `screenshots/` folder
 
+Open `notebooks/Image_Classification_Project.ipynb` and run all cells.
+
 **⏱️ Estimated Time:**
-- Dataset download: 2-5 minutes (depending on internet speed)
+
+---- Dataset download: 2-5 minutes (depending on internet speed)
+
 - Dataset preparation: 2-3 minutes
-- Full training: 20-30 minutes (optional - can skip for quick submission)
 
----
+## Requirements- Full training: 20-30 minutes (optional - can skip for quick submission)
 
-## 📊 Assignment Tasks
+
+
+- Python 3.8+---
+
+- TensorFlow 2.20.0
+
+- Keras 3.12.0## 📊 Assignment Tasks
+
+- See `requirements.txt` for complete list
 
 | Task | Description | Points | Screenshot File |
-|------|-------------|--------|-----------------|
+
+---|------|-------------|--------|-----------------|
+
 | 1 | Print TensorFlow version | 2 | `tensorflow_version.png` |
-| 2 | Create test_generator | 2 | `test_generator.png` |
+
+## Results| 2 | Create test_generator | 2 | `test_generator.png` |
+
 | 3 | Print train_generator length | 2 | `train_generator_len.png` |
-| 4 | Print model summary | 2 | `model_summary.png` |
-| 5 | Compile model | 2 | `model_compile.png` |
-| 6 | Plot accuracy curves (extract) | 2 | `plot_accuracy_curve.png` |
-| 7 | Plot loss curves (fine-tune) | 2 | `plot_loss_curve.png` |
-| 8 | Plot accuracy curves (fine-tune) | 2 | `plot_finetune_model.png` |
+
+- **Training samples:** 17,498 images| 4 | Print model summary | 2 | `model_summary.png` |
+
+- **Validation samples:** 3,750 images| 5 | Compile model | 2 | `model_compile.png` |
+
+- **Test samples:** 3,750 images| 6 | Plot accuracy curves (extract) | 2 | `plot_accuracy_curve.png` |
+
+- **Batch size:** 32| 7 | Plot loss curves (fine-tune) | 2 | `plot_loss_curve.png` |
+
+- **Batches per epoch:** 547| 8 | Plot accuracy curves (fine-tune) | 2 | `plot_finetune_model.png` |
+
 | 9 | Plot test image (extract model) | 2 | `extract_features_model.png` |
-| 10 | Plot test image (fine-tuned) | 4 | `finetuned_model.png` |
+
+---| 10 | Plot test image (fine-tuned) | 4 | `finetuned_model.png` |
+
 | **Total** | | **22** | **10 screenshots** |
 
+## License
+
 **Passing Score:** 70% (15.4/22 points)
+
+Educational project for IBM AI Engineering Professional Certificate.
 
 ---
 
